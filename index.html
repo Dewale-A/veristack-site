@@ -3,215 +3,233 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VeriStack — Innovate Boldly, Scale Securely</title>
-    <meta name="description" content="VeriStack specializes in AI governance and autonomous agent systems consulting for financial services. Innovate boldly, scale securely.">
-    <meta property="og:title" content="VeriStack — Innovate Boldly, Scale Securely">
+    <title>VeriStack | AI Governance & Agent Systems for Financial Services</title>
+    <meta name="description" content="VeriStack helps financial institutions deploy AI agent systems with governance, compliance, and audit trails built in from day one.">
+    <meta property="og:title" content="VeriStack | Innovate Boldly. Scale Securely.">
     <meta property="og:description" content="AI governance and autonomous agent systems consulting for financial services.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://veristack.ca">
     <meta property="og:image" content="https://veristack.ca/logo.png">
     <meta name="twitter:card" content="summary">
     <link rel="icon" type="image/png" href="logo.png">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --navy: #0B1A2E;
+            --navy-light: #152238;
+            --teal: #2ECBAB;
+            --teal-dark: #24A38A;
+            --slate: #6B7B8D;
+            --body: #3D4F5F;
+            --light: #F6F8FA;
+            --white: #FFFFFF;
+            --border: #E1E7ED;
+            --serif: 'DM Serif Display', Georgia, serif;
+            --sans: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            line-height: 1.6;
-            color: #334155;
-            background: #ffffff;
+            font-family: var(--sans);
+            font-size: 16px;
+            line-height: 1.7;
+            color: var(--body);
+            background: var(--white);
             -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
-        .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
 
-        /* ── Header ── */
+        /* Header */
         header {
-            background: rgba(255,255,255,0.95);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid #e2e8f0;
-            padding: 0.75rem 0;
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+            padding: 0.875rem 0;
             position: fixed; top: 0; width: 100%; z-index: 1000;
         }
         nav { display: flex; justify-content: space-between; align-items: center; }
         .logo {
             display: flex; align-items: center; gap: 0.6rem;
-            font-size: 1.4rem; font-weight: 700; color: #1B2A4A;
             text-decoration: none;
         }
-        .logo img { width: 36px; height: 36px; object-fit: contain; }
-        .nav-links { display: flex; list-style: none; gap: 2rem; }
+        .logo img { width: 34px; height: 34px; object-fit: contain; }
+        .logo span {
+            font-family: var(--sans); font-size: 1.25rem; font-weight: 700;
+            color: var(--navy); letter-spacing: -0.01em;
+        }
+        .nav-links { display: flex; list-style: none; gap: 2.25rem; align-items: center; }
         .nav-links a {
-            color: #475569; text-decoration: none; font-weight: 500;
-            font-size: 0.95rem; transition: color 0.2s;
+            color: var(--slate); text-decoration: none; font-weight: 500;
+            font-size: 0.9rem; transition: color 0.2s; letter-spacing: 0.01em;
         }
-        .nav-links a:hover { color: #1B2A4A; }
+        .nav-links a:hover { color: var(--navy); }
         .nav-cta {
-            background: #1B2A4A; color: #fff !important; padding: 0.5rem 1.25rem;
-            border-radius: 8px; font-weight: 600; transition: background 0.2s;
+            background: var(--navy); color: var(--white) !important;
+            padding: 0.55rem 1.25rem; border-radius: 6px; font-weight: 600;
+            transition: background 0.2s;
         }
-        .nav-cta:hover { background: #2ECBAB !important; color: #1B2A4A !important; }
+        .nav-cta:hover { background: var(--teal); }
 
-        /* ── Hero ── */
+        /* Hero */
         .hero {
             padding: 160px 0 100px;
-            background: linear-gradient(165deg, #0f172a 0%, #1B2A4A 40%, #1e3a5f 100%);
-            color: white; text-align: center; position: relative; overflow: hidden;
-        }
-        .hero::after {
-            content: ''; position: absolute; bottom: -2px; left: 0; right: 0; height: 80px;
-            background: linear-gradient(to top, #ffffff, transparent);
-        }
-        .hero-badge {
-            display: inline-block; background: rgba(46,203,171,0.15); color: #2ECBAB;
-            padding: 0.4rem 1rem; border-radius: 20px; font-size: 0.85rem;
-            font-weight: 600; margin-bottom: 1.5rem; letter-spacing: 0.5px;
+            background: var(--navy);
+            color: var(--white); text-align: center;
         }
         .hero h1 {
-            font-size: 3.5rem; font-weight: 800; margin-bottom: 1rem;
-            letter-spacing: -0.02em; line-height: 1.15;
+            font-family: var(--serif); font-size: 3.25rem; font-weight: 400;
+            line-height: 1.2; margin-bottom: 1.25rem; letter-spacing: -0.01em;
         }
-        .hero h1 span { color: #2ECBAB; }
-        .hero .subtitle {
-            font-size: 1.2rem; max-width: 620px; margin: 0 auto 2.5rem;
-            color: #94a3b8; line-height: 1.7; font-weight: 400;
+        .hero h1 em {
+            font-style: normal; color: var(--teal);
+        }
+        .hero p {
+            font-size: 1.125rem; color: #94A3B8; max-width: 560px;
+            margin: 0 auto 2.5rem; line-height: 1.75; font-weight: 400;
         }
         .hero-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
         .btn-primary {
-            background: #2ECBAB; color: #0f172a; padding: 0.9rem 2rem;
-            border: none; border-radius: 10px; font-size: 1rem; font-weight: 700;
-            text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem;
-            transition: transform 0.2s, box-shadow 0.2s; cursor: pointer;
+            background: var(--teal); color: var(--navy); padding: 0.85rem 1.75rem;
+            border: none; border-radius: 6px; font-size: 0.95rem; font-weight: 700;
+            text-decoration: none; transition: background 0.2s, transform 0.15s;
+            font-family: var(--sans); letter-spacing: 0.01em;
         }
-        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(46,203,171,0.35); }
-        .btn-secondary {
-            background: transparent; color: #e2e8f0; padding: 0.9rem 2rem;
-            border: 2px solid #475569; border-radius: 10px; font-size: 1rem; font-weight: 600;
-            text-decoration: none; transition: border-color 0.2s, color 0.2s;
+        .btn-primary:hover { background: #36DDB9; transform: translateY(-1px); }
+        .btn-outline {
+            background: transparent; color: #94A3B8; padding: 0.85rem 1.75rem;
+            border: 1.5px solid #334155; border-radius: 6px; font-size: 0.95rem;
+            font-weight: 600; text-decoration: none; transition: border-color 0.2s, color 0.2s;
+            font-family: var(--sans);
         }
-        .btn-secondary:hover { border-color: #2ECBAB; color: #2ECBAB; }
+        .btn-outline:hover { border-color: var(--teal); color: var(--teal); }
 
-        /* ── Trust Bar ── */
+        /* Trust Bar */
         .trust-bar {
-            padding: 3rem 0; text-align: center; border-bottom: 1px solid #f1f5f9;
+            padding: 2.5rem 0; border-bottom: 1px solid var(--border); text-align: center;
         }
-        .trust-bar p { font-size: 0.85rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 600; margin-bottom: 1.25rem; }
-        .trust-items { display: flex; justify-content: center; gap: 2.5rem; flex-wrap: wrap; align-items: center; }
+        .trust-label {
+            font-size: 0.75rem; color: var(--slate); text-transform: uppercase;
+            letter-spacing: 2px; font-weight: 600; margin-bottom: 1rem;
+        }
+        .trust-items { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
         .trust-item {
-            color: #64748b; font-size: 0.9rem; font-weight: 600;
-            padding: 0.5rem 1rem; border: 1px solid #e2e8f0; border-radius: 8px;
-            background: #f8fafc;
+            color: var(--slate); font-size: 0.85rem; font-weight: 600;
+            padding: 0.4rem 0.85rem; border: 1px solid var(--border); border-radius: 4px;
         }
 
-        /* ── Sections ── */
+        /* Sections */
         section { padding: 80px 0; }
         .section-label {
-            text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem;
-            color: #2ECBAB; font-weight: 700; margin-bottom: 0.75rem; text-align: center;
+            text-transform: uppercase; letter-spacing: 2.5px; font-size: 0.75rem;
+            color: var(--teal); font-weight: 700; margin-bottom: 0.75rem; text-align: center;
         }
         .section-title {
-            text-align: center; font-size: 2.25rem; font-weight: 800;
-            color: #0f172a; margin-bottom: 1rem; letter-spacing: -0.01em;
+            font-family: var(--serif); text-align: center; font-size: 2.25rem;
+            font-weight: 400; color: var(--navy); margin-bottom: 1rem;
         }
         .section-subtitle {
-            text-align: center; font-size: 1.1rem; color: #64748b;
-            max-width: 580px; margin: 0 auto 3.5rem; line-height: 1.7;
+            text-align: center; font-size: 1.05rem; color: var(--slate);
+            max-width: 540px; margin: 0 auto 3.5rem; line-height: 1.75;
         }
 
-        /* ── Pillars ── */
-        .pillars { background: #f8fafc; }
+        /* Pillars */
+        .pillars { background: var(--light); }
         .pillars-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
         .pillar-card {
-            background: #fff; padding: 2.5rem 2rem; border-radius: 16px;
-            border: 1px solid #e2e8f0; transition: transform 0.2s, box-shadow 0.2s;
+            background: var(--white); padding: 2.25rem 2rem; border-radius: 8px;
+            border: 1px solid var(--border); transition: box-shadow 0.25s;
             position: relative;
         }
-        .pillar-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.08); }
-        .pillar-icon {
-            width: 48px; height: 48px; border-radius: 12px; display: flex;
-            align-items: center; justify-content: center; font-size: 1.5rem;
-            margin-bottom: 1.25rem;
-        }
-        .pillar-icon.build { background: #dbeafe; }
-        .pillar-icon.govern { background: #fce7f3; }
-        .pillar-icon.enable { background: #d1fae5; }
+        .pillar-card:hover { box-shadow: 0 8px 30px rgba(0,0,0,0.06); }
         .pillar-lead {
-            position: absolute; top: 1.25rem; right: 1.25rem;
-            background: #0f172a; color: #2ECBAB; font-size: 0.7rem;
-            font-weight: 700; padding: 0.25rem 0.75rem; border-radius: 6px;
-            text-transform: uppercase; letter-spacing: 0.5px;
+            position: absolute; top: 1rem; right: 1rem;
+            background: var(--navy); color: var(--teal); font-size: 0.65rem;
+            font-weight: 700; padding: 0.2rem 0.6rem; border-radius: 4px;
+            text-transform: uppercase; letter-spacing: 0.75px;
         }
-        .pillar-card h3 { font-size: 1.2rem; font-weight: 700; color: #0f172a; margin-bottom: 0.75rem; }
-        .pillar-card p { color: #64748b; line-height: 1.7; font-size: 0.95rem; }
-        .pillar-list {
-            margin-top: 1rem; padding: 0; list-style: none;
+        .pillar-card h3 {
+            font-family: var(--serif); font-size: 1.25rem; font-weight: 400;
+            color: var(--navy); margin-bottom: 0.75rem;
         }
+        .pillar-card p { color: var(--slate); line-height: 1.7; font-size: 0.95rem; }
+        .pillar-list { margin-top: 1.25rem; padding: 0; list-style: none; }
         .pillar-list li {
-            padding: 0.3rem 0; color: #475569; font-size: 0.9rem;
-            padding-left: 1.25rem; position: relative;
+            padding: 0.35rem 0 0.35rem 1.5rem; color: var(--body);
+            font-size: 0.9rem; position: relative;
         }
         .pillar-list li::before {
-            content: '✓'; position: absolute; left: 0; color: #2ECBAB; font-weight: 700;
+            content: ''; position: absolute; left: 0; top: 0.75rem;
+            width: 8px; height: 8px; background: var(--teal); border-radius: 50%;
         }
 
-        /* ── Stats ── */
-        .stats-section { background: #0f172a; color: #fff; padding: 60px 0; }
+        /* Stats */
+        .stats-section { background: var(--navy); color: var(--white); padding: 56px 0; }
         .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; text-align: center; }
-        .stat-number { font-size: 2.5rem; font-weight: 800; color: #2ECBAB; }
-        .stat-label { font-size: 0.95rem; color: #94a3b8; margin-top: 0.25rem; }
+        .stat-number { font-family: var(--serif); font-size: 2.5rem; color: var(--teal); }
+        .stat-label { font-size: 0.9rem; color: #94A3B8; margin-top: 0.25rem; }
 
-        /* ── Why Section ── */
+        /* Why */
         .why-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
         .why-card {
-            padding: 2rem; border-radius: 12px; border: 1px solid #e2e8f0;
-            background: #fff;
+            padding: 2rem; border-radius: 8px; border: 1px solid var(--border);
         }
-        .why-card h3 { font-size: 1.1rem; font-weight: 700; color: #0f172a; margin-bottom: 0.5rem; }
-        .why-card p { color: #64748b; line-height: 1.7; font-size: 0.95rem; }
+        .why-card h3 {
+            font-family: var(--sans); font-size: 1.05rem; font-weight: 700;
+            color: var(--navy); margin-bottom: 0.5rem;
+        }
+        .why-card p { color: var(--slate); line-height: 1.7; font-size: 0.95rem; }
 
-        /* ── Founder ── */
-        .founder { background: #f8fafc; }
+        /* Founder */
+        .founder { background: var(--light); }
         .founder-content {
-            display: flex; align-items: center; gap: 3rem;
-            max-width: 800px; margin: 0 auto;
+            display: flex; align-items: center; gap: 2.5rem;
+            max-width: 740px; margin: 0 auto;
         }
         .founder-avatar {
-            width: 120px; height: 120px; border-radius: 50%;
-            background: linear-gradient(135deg, #1B2A4A, #2ECBAB);
+            width: 110px; height: 110px; border-radius: 50%;
+            background: var(--navy);
             display: flex; align-items: center; justify-content: center;
-            font-size: 2.5rem; color: #fff; font-weight: 700; flex-shrink: 0;
+            font-family: var(--serif); font-size: 2rem; color: var(--teal);
+            flex-shrink: 0;
         }
-        .founder-info h3 { font-size: 1.5rem; font-weight: 700; color: #0f172a; }
-        .founder-info .role { color: #2ECBAB; font-weight: 600; margin-bottom: 1rem; }
-        .founder-info p { color: #64748b; line-height: 1.7; }
+        .founder-info h3 {
+            font-family: var(--serif); font-size: 1.5rem; color: var(--navy);
+        }
+        .founder-info .role {
+            color: var(--teal); font-weight: 600; font-size: 0.95rem; margin-bottom: 0.75rem;
+        }
+        .founder-info p { color: var(--slate); line-height: 1.75; font-size: 0.95rem; }
 
-        /* ── CTA Section ── */
+        /* CTA */
         .cta-section {
-            background: linear-gradient(165deg, #0f172a 0%, #1B2A4A 100%);
-            color: white; text-align: center; padding: 80px 0;
+            background: var(--navy); color: var(--white); text-align: center; padding: 80px 0;
         }
-        .cta-section h2 { font-size: 2.25rem; font-weight: 800; margin-bottom: 1rem; }
-        .cta-section p { font-size: 1.1rem; color: #94a3b8; max-width: 500px; margin: 0 auto 2rem; }
+        .cta-section h2 {
+            font-family: var(--serif); font-size: 2.25rem; font-weight: 400;
+            margin-bottom: 1rem;
+        }
+        .cta-section p { font-size: 1.05rem; color: #94A3B8; max-width: 480px; margin: 0 auto 2rem; }
         .cta-email {
-            display: inline-block; background: rgba(46,203,171,0.1); border: 2px solid #2ECBAB;
-            color: #2ECBAB; padding: 1rem 2rem; border-radius: 12px;
-            font-size: 1.2rem; font-weight: 700; text-decoration: none;
-            transition: background 0.2s;
+            display: inline-block; border: 1.5px solid var(--teal); color: var(--teal);
+            padding: 0.85rem 2rem; border-radius: 6px; font-size: 1.1rem;
+            font-weight: 700; text-decoration: none; transition: background 0.2s;
+            font-family: var(--sans);
         }
-        .cta-email:hover { background: rgba(46,203,171,0.2); }
+        .cta-email:hover { background: rgba(46,203,171,0.1); }
 
-        /* ── Footer ── */
+        /* Footer */
         footer {
-            background: #0f172a; color: #64748b; text-align: center;
-            padding: 2rem 0; border-top: 1px solid #1e293b; font-size: 0.9rem;
+            background: var(--navy); color: var(--slate); text-align: center;
+            padding: 1.5rem 0; border-top: 1px solid #1E293B; font-size: 0.85rem;
         }
 
-        /* ── Responsive ── */
+        /* Responsive */
         @media (max-width: 768px) {
             .nav-links { display: none; }
             .hero h1 { font-size: 2.25rem; }
-            .hero { padding: 130px 0 80px; }
+            .hero { padding: 130px 0 72px; }
             .pillars-grid { grid-template-columns: 1fr; }
             .stats-grid { grid-template-columns: repeat(2, 1fr); }
             .why-grid { grid-template-columns: 1fr; }
@@ -221,49 +239,42 @@
         @media (max-width: 480px) {
             .hero h1 { font-size: 1.85rem; }
             .stats-grid { grid-template-columns: 1fr; }
-            .trust-items { gap: 1rem; }
+            .trust-items { gap: 0.75rem; }
             .hero-buttons { flex-direction: column; align-items: center; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header -->
     <header>
         <nav class="container">
             <a href="#" class="logo">
                 <img src="logo.png" alt="VeriStack">
-                VeriStack
+                <span>VeriStack</span>
             </a>
             <ul class="nav-links">
-                <li><a href="#pillars">Services</a></li>
-                <li><a href="#why">Why Us</a></li>
-                <li><a href="#founder">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#why">Why VeriStack</a></li>
+                <li><a href="#about">About</a></li>
                 <li><a href="#contact" class="nav-cta">Get in Touch</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Hero -->
     <section class="hero">
         <div class="container">
-            <div class="hero-badge">AI Governance for Financial Services</div>
-            <h1>Innovate Boldly.<br><span>Scale Securely.</span></h1>
-            <p class="subtitle">
-                We help financial institutions deploy AI agent systems with confidence — 
-                governance, compliance, and audit trails built in from day one.
-            </p>
+            <h1>Innovate Boldly.<br><em>Scale Securely.</em></h1>
+            <p>We help financial institutions deploy AI agent systems with confidence. Governance, compliance, and full audit trails, built in from day one.</p>
             <div class="hero-buttons">
-                <a href="#contact" class="btn-primary">Book a Discovery Call →</a>
-                <a href="#pillars" class="btn-secondary">Explore Services</a>
+                <a href="#contact" class="btn-primary">Book a Discovery Call</a>
+                <a href="#services" class="btn-outline">Explore Our Services</a>
             </div>
         </div>
     </section>
 
-    <!-- Trust Bar -->
     <div class="trust-bar">
         <div class="container">
-            <p>Frameworks & Standards We Work With</p>
+            <p class="trust-label">Frameworks and Standards We Work With</p>
             <div class="trust-items">
                 <span class="trust-item">NIST AI RMF</span>
                 <span class="trust-item">ISO 42001</span>
@@ -274,43 +285,37 @@
         </div>
     </div>
 
-    <!-- Pillars -->
-    <section id="pillars" class="pillars">
+    <section id="services" class="pillars">
         <div class="container">
             <p class="section-label">What We Do</p>
             <h2 class="section-title">Three Pillars of Service</h2>
-            <p class="section-subtitle">
-                End-to-end AI agent solutions — from architecture to governance to team enablement.
-            </p>
+            <p class="section-subtitle">End-to-end AI agent solutions, from architecture to governance to team enablement.</p>
 
             <div class="pillars-grid">
                 <div class="pillar-card">
-                    <div class="pillar-icon build">🏗️</div>
-                    <h3>Agent System Design & Build</h3>
-                    <p>Multi-agent architectures tailored to your workflows — loan origination, compliance checks, risk assessment, and more.</p>
+                    <h3>Agent System Design and Build</h3>
+                    <p>Multi-agent architectures tailored to your workflows. Loan origination, compliance checks, risk assessment, and beyond.</p>
                     <ul class="pillar-list">
                         <li>Custom agent orchestration</li>
-                        <li>API & workflow integration</li>
+                        <li>API and workflow integration</li>
                         <li>Production deployment</li>
                     </ul>
                 </div>
 
                 <div class="pillar-card">
                     <span class="pillar-lead">Lead Pillar</span>
-                    <div class="pillar-icon govern">🛡️</div>
                     <h3>AI Governance for Agent Systems</h3>
                     <p>Comprehensive controls, audit trails, and compliance frameworks purpose-built for autonomous AI agents in regulated environments.</p>
                     <ul class="pillar-list">
                         <li>Agent-level audit trails</li>
                         <li>Regulatory compliance mapping</li>
-                        <li>Risk assessment & controls</li>
+                        <li>Risk assessment and controls</li>
                     </ul>
                 </div>
 
                 <div class="pillar-card">
-                    <div class="pillar-icon enable">🎯</div>
-                    <h3>AI Enablement & Training</h3>
-                    <p>Workshops, executive briefings, and hands-on programs that build lasting internal AI capability across your organization.</p>
+                    <h3>AI Enablement and Training</h3>
+                    <p>Workshops, executive briefings, and hands-on programs that build lasting AI capability across your organization.</p>
                     <ul class="pillar-list">
                         <li>Executive AI briefings</li>
                         <li>Technical team upskilling</li>
@@ -321,7 +326,6 @@
         </div>
     </section>
 
-    <!-- Stats -->
     <section class="stats-section">
         <div class="container">
             <div class="stats-grid">
@@ -330,11 +334,11 @@
                     <div class="stat-label">Years in Financial Services</div>
                 </div>
                 <div>
-                    <div class="stat-number">60-70%</div>
+                    <div class="stat-number">60%</div>
                     <div class="stat-label">Less Than Big Four Pricing</div>
                 </div>
                 <div>
-                    <div class="stat-number">3×</div>
+                    <div class="stat-number">3x</div>
                     <div class="stat-label">Faster Delivery</div>
                 </div>
                 <div>
@@ -345,38 +349,34 @@
         </div>
     </section>
 
-    <!-- Why VeriStack -->
     <section id="why">
         <div class="container">
             <p class="section-label">Why VeriStack</p>
-            <h2 class="section-title">Built Different</h2>
-            <p class="section-subtitle">
-                The only boutique firm specializing in agentic AI governance for financial services.
-            </p>
+            <h2 class="section-title">Built for This</h2>
+            <p class="section-subtitle">The only boutique firm specializing in agentic AI governance for financial services.</p>
 
             <div class="why-grid">
                 <div class="why-card">
-                    <h3>🎯 Specialized, Not Generalist</h3>
-                    <p>We don't do "a bit of everything." We do AI governance and agent systems for financial services — deeply, exclusively, and exceptionally well.</p>
+                    <h3>Specialized, Not Generalist</h3>
+                    <p>We do AI governance and agent systems for financial services. Deeply, exclusively, and exceptionally well.</p>
                 </div>
                 <div class="why-card">
-                    <h3>🔧 We Build, Not Just Advise</h3>
-                    <p>No 200-page decks that collect dust. We implement working systems — multi-agent architectures, governance frameworks, production deployments.</p>
+                    <h3>We Build, Not Just Advise</h3>
+                    <p>No decks that collect dust. We deliver working multi-agent systems, governance frameworks, and production deployments.</p>
                 </div>
                 <div class="why-card">
-                    <h3>⚡ Startup Speed, Enterprise Rigor</h3>
-                    <p>3× faster than traditional consultancies because we're lean and focused. But our governance and compliance standards rival any Big Four engagement.</p>
+                    <h3>Startup Speed, Enterprise Rigor</h3>
+                    <p>Three times faster than traditional consultancies because we are lean and focused. Our compliance standards rival any Big Four engagement.</p>
                 </div>
                 <div class="why-card">
-                    <h3>🏦 We Speak Your Language</h3>
-                    <p>A decade in financial services means we understand your regulatory reality — OSFI, OCC, model risk management — not just the tech.</p>
+                    <h3>We Speak Your Language</h3>
+                    <p>A decade in financial services means we understand your regulatory reality. OSFI, OCC, model risk management. Not just the technology.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Founder -->
-    <section id="founder" class="founder">
+    <section id="about" class="founder">
         <div class="container">
             <p class="section-label">About</p>
             <h2 class="section-title">Meet the Founder</h2>
@@ -384,26 +384,24 @@
                 <div class="founder-avatar">WA</div>
                 <div class="founder-info">
                     <h3>Wale Aderonmu</h3>
-                    <p class="role">Founder & Principal Consultant</p>
-                    <p>10+ years navigating financial services — from frontline banking to enterprise data and AI governance. Wale bridges the gap between what regulators require and what AI systems can deliver, helping institutions adopt agent technologies without compromising on compliance or control.</p>
+                    <p class="role">Founder and Principal Consultant</p>
+                    <p>Over ten years navigating financial services, from frontline banking to enterprise data and AI governance. Wale bridges the gap between what regulators require and what AI systems can deliver, helping institutions adopt agent technologies without compromising on compliance or control.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA -->
     <section id="contact" class="cta-section">
         <div class="container">
             <h2>Ready to Build With Confidence?</h2>
-            <p>Let's talk about how your organization can deploy AI agents that regulators will actually sign off on.</p>
+            <p>Let us talk about how your organization can deploy AI agents that regulators will sign off on.</p>
             <a href="mailto:contact@veristack.ca" class="cta-email">contact@veristack.ca</a>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
-            <p>© 2026 VeriStack. All rights reserved. Innovate Boldly, Scale Securely.</p>
+            <p>&copy; 2026 VeriStack. All rights reserved.</p>
         </div>
     </footer>
 
