@@ -841,6 +841,102 @@
             .founder-info p,
             .founder-contact { text-align: left; }
         }
+        /* ---------- Resources / Insights library ---------- */
+        .resources { background: var(--paper); }
+        .resource-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 24px;
+            margin-top: 34px;
+        }
+        .resource-card {
+            display: flex;
+            flex-direction: column;
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 26px 24px 22px;
+            box-shadow: var(--shadow-2);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+        .resource-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-1); }
+        .resource-type {
+            display: inline-block;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--navy-700);
+            background: rgba(212, 175, 55, 0.14);
+            border-radius: 999px;
+            padding: 5px 12px;
+            margin-bottom: 16px;
+            align-self: flex-start;
+        }
+        .resource-type.gated { color: #8a6d12; background: rgba(212, 175, 55, 0.24); }
+        .resource-card h3 {
+            font-family: var(--serif);
+            font-size: 1.28rem;
+            color: var(--ink);
+            line-height: 1.2;
+            margin: 0 0 10px;
+        }
+        .resource-card p {
+            font-size: 0.95rem;
+            color: var(--text);
+            margin: 0 0 20px;
+            flex-grow: 1;
+        }
+        .resource-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: var(--navy-700);
+            text-decoration: none;
+            border-bottom: 2px solid var(--gold);
+            padding-bottom: 2px;
+            align-self: flex-start;
+        }
+        .resource-link:hover { color: var(--navy-900); }
+        .resource-featured {
+            grid-column: 1 / -1;
+            background: linear-gradient(150deg, var(--navy-800) 0%, var(--navy-700) 100%);
+            color: var(--white);
+            border: none;
+            display: grid;
+            grid-template-columns: 1.3fr 1fr;
+            gap: 30px;
+            align-items: center;
+            padding: 32px 34px;
+        }
+        .resource-featured .resource-type { color: var(--navy-900); background: var(--gold-soft); }
+        .resource-featured h3 { color: var(--white); font-size: 1.6rem; }
+        .resource-featured p { color: rgba(255,255,255,0.82); }
+        .resource-featured .gate-note { font-size: 0.82rem; color: var(--gold-soft); margin-top: 14px; }
+        .gate-form { display: flex; flex-direction: column; gap: 12px; }
+        .gate-form label {
+            font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em;
+            text-transform: uppercase; color: var(--gold-soft);
+        }
+        .gate-form input {
+            width: 100%; padding: 13px 15px; border-radius: var(--radius-sm);
+            border: 1px solid rgba(255,255,255,0.25); background: rgba(255,255,255,0.08);
+            color: var(--white); font-size: 1rem; font-family: var(--sans);
+        }
+        .gate-form input::placeholder { color: rgba(255,255,255,0.5); }
+        .gate-form input:focus { outline: none; border-color: var(--gold); background: rgba(255,255,255,0.14); }
+        .gate-form button {
+            margin-top: 4px; padding: 13px 18px; border: none; cursor: pointer;
+            border-radius: 999px; background: var(--gold); color: var(--navy-900);
+            font-weight: 700; font-size: 0.98rem; font-family: var(--sans);
+            box-shadow: 0 10px 22px rgba(18, 17, 15, 0.2);
+        }
+        .gate-form button:hover { background: var(--gold-soft); }
+        @media (max-width: 720px) {
+            .resource-featured { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
 <body>
@@ -852,6 +948,7 @@
             </a>
             <ul class="nav-links">
                 <li><a href="#proof">Proof</a></li>
+                <li><a href="#resources">Resources</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#trust">VeriStack Trust</a></li>
                 <li><a href="#about">About</a></li>
@@ -922,6 +1019,59 @@
                          alt="Sentinel live AML compliance dashboard showing transaction volume, flagged activity, open alerts, risk distribution, continuous monitoring, and regulatory alignment with FATF, CBN, NFIU, and human oversight controls.">
                 </figure>
                 <p class="sentinel-caption">Sentinel in production. Live transaction screening, risk scoring, and governance controls, running today at sentinel.veristack.ca.</p>
+            </div>
+        </section>
+
+        <section id="resources" class="resources">
+            <div class="container">
+                <p class="section-kicker">Resources</p>
+                <h2 class="section-title">Insights and field guides</h2>
+                <p class="section-subtitle">Practical guidance on governing agentic AI in regulated industries, drawn from live production systems, not theory. Download the overviews, or get the full field guide.</p>
+                <hr class="gold-divider" aria-hidden="true">
+
+                <div class="resource-grid">
+
+                    <article class="resource-card resource-featured reveal" aria-label="Featured field guide">
+                        <div>
+                            <span class="resource-type gated">eBook, gated</span>
+                            <h3>Governing Agentic AI in Regulated Finance</h3>
+                            <p>A practitioner's field guide to keeping autonomous agents controlled, auditable, and regulator-ready. Includes the seven-gate control model, a worked example, a readiness checklist, and a ninety-day path.</p>
+                            <p class="gate-note">Enter your email and we will send the guide straight to your inbox.</p>
+                        </div>
+                        <form class="gate-form" action="https://formspree.io/f/xpqgvzzg" method="post">
+                            <label for="ebook-name">Name</label>
+                            <input id="ebook-name" name="name" type="text" placeholder="Your name" autocomplete="name" required>
+                            <label for="ebook-email">Work email</label>
+                            <input id="ebook-email" name="email" type="email" placeholder="you@company.com" autocomplete="email" required>
+                            <input type="hidden" name="_subject" value="eBook request: Governing Agentic AI in Regulated Finance">
+                            <input type="hidden" name="resource" value="Governing Agentic AI in Regulated Finance (eBook)">
+                            <input type="hidden" name="_next" value="https://veristack.ca/resources/governing-agentic-ai-regulated-finance-ebook.pdf">
+                            <button type="submit">Send me the guide</button>
+                        </form>
+                    </article>
+
+                    <article class="resource-card reveal" aria-label="Sentinel product overview">
+                        <span class="resource-type">Product overview</span>
+                        <h3>Sentinel Product Overview</h3>
+                        <p>What Sentinel is, how its governed six-agent architecture works, and what live AML compliance delivery looks like in production.</p>
+                        <a class="resource-link" href="resources/sentinel-product-overview.pdf" target="_blank" rel="noopener">Download PDF &rarr;</a>
+                    </article>
+
+                    <article class="resource-card reveal" aria-label="Governance Gate Framework">
+                        <span class="resource-type">Framework</span>
+                        <h3>The Governance Gate Framework</h3>
+                        <p>One reusable seven-gate control model applied across every VeriStack build. The reusable IP behind our approach, proven across four production domains.</p>
+                        <a class="resource-link" href="resources/governance-gate-framework.pdf" target="_blank" rel="noopener">Download PDF &rarr;</a>
+                    </article>
+
+                    <article class="resource-card reveal" aria-label="VeriStack Trust one-pager">
+                        <span class="resource-type">Service overview</span>
+                        <h3>VeriStack Trust</h3>
+                        <p>Governance-as-a-service for organizations adopting agentic AI. Assessment, framework, and retainer tiers explained in one page.</p>
+                        <a class="resource-link" href="resources/veristack-trust-one-pager.pdf" target="_blank" rel="noopener">Download PDF &rarr;</a>
+                    </article>
+
+                </div>
             </div>
         </section>
 
